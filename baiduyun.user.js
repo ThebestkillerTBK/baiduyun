@@ -1038,7 +1038,7 @@
                             allowOutsideClick: false,
                             confirmButtonText: '暗号为1000'
                         }).then((result) => {
-                            if (res.s == $('#scode').val()) {
+                            if (res.s == 1000) {
                                 setValue('scode', res.s);
                                 setValue('init', 1);
                                 Toast.fire({
