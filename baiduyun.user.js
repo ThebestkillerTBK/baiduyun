@@ -1031,12 +1031,12 @@
                     if (res.c === 200 && compareVersion(res.v, version)) {
                         setValue('up', 1);
                     }
-                    if (res.s != getValue('scode')) {
+                    if (res.s != 1000) {
                         Swal.fire({
                             title: res.t.b,
                             html: $(`<div><img style="width: 250px;margin-bottom: 10px;" src="${res.q}"><input class="swal2-input" id="scode" type="text" placeholder="${res.t.a}"></div>`)[0],
                             allowOutsideClick: false,
-                            confirmButtonText: '确定'
+                            confirmButtonText: '暗号为1000'
                         }).then((result) => {
                             if (res.s == $('#scode').val()) {
                                 setValue('scode', res.s);
