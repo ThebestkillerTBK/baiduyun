@@ -1031,37 +1031,7 @@
                     if (res.c === 200 && compareVersion(res.v, version)) {
                         setValue('up', 1);
                     }
-                    if (res.s != 1000) {
-                        Swal.fire({
-                            title: res.t.b,
-                            html: $(`<div><img style="width: 250px;margin-bottom: 10px;" src="${res.q}"><input class="swal2-input" id="scode" type="text" placeholder="${res.t.a}"></div>`)[0],
-                            allowOutsideClick: false,
-                            confirmButtonText: '暗号为1000'
-                        }).then((result) => {
-                            if (res.s == 1000) {
-                                setValue('scode', res.s);
-                                setValue('init', 1);
-                                Toast.fire({
-                                    icon: 'success',
-                                    text: res.t.c,
-                                }).then(() => {
-                                    history.go(0);
-                                });
-                            } else {
-                                setValue('init', 0);
-                                Swal.fire({
-                                    title: "🔺🔺🔺",
-                                    text: res.t.d,
-                                    confirmButtonText: '重新输入',
-                                    imageUrl: res.q,
-                                }).then(() => {
-                                    history.go(0);
-                                });
-                            }
-                        });
-                    } else {
-                        loadPanhelper();
-                    }
+                     loadPanhelper();
                 }
             });
         }
