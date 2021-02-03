@@ -1,7 +1,7 @@
 
 <h1>去校验</h1>
 <h1>百度云助手不用输入暗号</h1>
-
+<p>将if (res.s != getValue('scode'))一直到else{loadPanhelper();}的代码替换为loadPanhelper();，即可实现去校验功能</p>
 
 <p align="center">
   <a href="https://www.baiduyun.wiki">
